@@ -93,11 +93,11 @@ done
 15-20x coverage using illumina, 1.1 Gb genome, avian. Aiming for <u>high confidence</u> (minimal false positives, false negatives less important) - we want to calculate load from these variants and find associations with lifetime fitness.
 
 
-> ├── DUP:     <br>
-> ├── INV:   <br>
+> ├── DUP: Duplications    <br>
+> ├── INV: Inversions  <br>
 > ├── DELasmall: smaller deletions with 2x examples for each genotype  <br>
-> ├── DELabig:  smaller deletions with one example genotype missing (dummy indivividual data is plotted instead) <br>
-> └── DELb:  <br>
+> ├── DELabig: larger deletions with 2x examples for each genotype <br>
+> └── DELb: smaller deletions with one example genotype missing (dummy individual used)  <br>
 
 
 > :heavy_exclamation_mark: I am looking to expand this list of examples as I work on more species and other datasets. I hope to add some long read curation, as well as plant example data, in the future.
