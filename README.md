@@ -105,20 +105,22 @@ write.table(keep$SNP_ID, file = "curated_SVs_keep.txt", sep = "\t", row.names = 
 
 ### Example data 1: Nc3 [structural variants in hihi](https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.17631).
 
-15-20x coverage using illumina, 1.2 Gb genome, avian. Aiming for <u>high confidence</u> (minimal false positives, false negatives less important) - we want to calculate load from these variants and find associations with lifetime fitness.
+20x coverage using illumina, 1.2 Gb genome, avian. This dataset is the merged dataset of 3 short read callers.
 
-> ├── DUP:     <br>
-> ├── INV:   <br>
-> ├── DELasmall: smaller deletions with 2x examples for each genotype  <br>
-> ├── DELabig:  smaller deletions with one example genotype missing (dummy indivividual data is plotted instead) <br>
-> └── DELb:  <br>
+Aiming for <u>high confidence</u> (minimal false positives, false negatives less important) - we want to calculate load from these variants and find associations with lifetime fitness.
+
+> ├── DELasmall: smaller deletions with 2x examples for each genotype <br>
+> ├── DELabig: larger deletions with 2x examples for each genotype <br>
+> ├── DELb: smaller deletions with one example genotype missing (dummy individual used)<br>
+> ├── DUP: Duplications, with no minimum genotype filter <br>
+> └── INV: Inversions, with no minimum genotype filter <br>
 
 ### Example data 2: At3 structural variants in myna (unpublished).
 
-15-20x coverage using illumina, 1.1 Gb genome, avian. Aiming for <u>high confidence</u> (minimal false positives, false negatives less important) - we want to calculate load from these variants and find associations with lifetime fitness.
+15x coverage using illumina, 1.1 Gb genome, avian. Aiming for <u>high confidence</u> (minimal false positives, false negatives less important) - we want to calculate load from these variants and find associations with lifetime fitness.
 
 
-> ├── DUP: Duplications    <br>
+> ├── DUP: Duplications, with no minimum genotype filter     <br>
 > ├── DELasmall: smaller deletions with 2x examples for each genotype  <br>
 > └── DELabig: larger deletions with 2x examples for each genotype<br>
 
