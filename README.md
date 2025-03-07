@@ -78,18 +78,26 @@ done
 
 ## Now the example data
 
-### Example data 1: Nc3, 
+### Example data 1: Nc3 [structural variants in hihi](https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.17631).
 
-15-20x coverage using illumina, 1.2 Gb genome. Aiming for <u>high confidence</u> (minimal false positives, false negatives less important) - we want to [calculate load from these variants and find associations with lifetime fitness](https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.17631).
+15-20x coverage using illumina, 1.2 Gb genome, avian. Aiming for <u>high confidence</u> (minimal false positives, false negatives less important) - we want to calculate load from these variants and find associations with lifetime fitness.
 
-> outlier_analysis/ <br>
-> ├── analysis <br>
-> │   ├── bayescan <br>
-> │   ├── baypass <br>
-> │   ├── pcadapt <br>
-> │   ├── summary <br>
-> │   └── vcftools_fst <br>
-> ├── data  <br>
-> ├── programs  <br>
-> └── workshop_material <br>
+> ├── DUP:     <br>
+> ├── INV:   <br>
+> ├── DELasmall: smaller deletions with 2x examples for each genotype  <br>
+> ├── DELabig:  smaller deletions with one example genotype missing (dummy indivividual data is plotted instead) <br>
+> └── DELb:  <br>
 
+### Example data 2: At3 structural variants in myna (unpublished).
+
+15-20x coverage using illumina, 1.1 Gb genome, avian. Aiming for <u>high confidence</u> (minimal false positives, false negatives less important) - we want to calculate load from these variants and find associations with lifetime fitness.
+
+
+> ├── DUP:     <br>
+> ├── INV:   <br>
+> ├── DELasmall: smaller deletions with 2x examples for each genotype  <br>
+> ├── DELabig:  smaller deletions with one example genotype missing (dummy indivividual data is plotted instead) <br>
+> └── DELb:  <br>
+
+
+> :heavy_exclamation_mark: I am looking to expand this list of examples as I work on more species and other datasets. I hope to add some long read curation, as well as plant example data, in the future.
