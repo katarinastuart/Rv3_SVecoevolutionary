@@ -60,6 +60,29 @@ plotcritic \
 done
 ```
 
+finally, you can import the variants into R to find the variant IDs that you want to keep.
+
+```
+library(dplyr)
+library(stringr)
+library(jsonlite)
+
+DELasmall <- fromJSON("DELasmall_plot_report.json", flatten=TRUE)
+DELabig <- fromJSON("DELabig_plot_report.json", flatten=TRUE)
+DUP <- fromJSON("DUP_plot_report.json", flatten=TRUE)
+INV <- fromJSON("INV_plot_report.json", flatten=TRUE)
+DELb <- fromJSON("DELb_plot_report.json", flatten=TRUE)
+
+outcomes <- rbind(DELasmall,DELabig, DUP, INV, DELb)
+
+result <- outcomes %>% mutate(SNP_ID= str_replace_all(Image, "_", ":")) 
+result <- result %>% mutate(keep = if_else(result$score =="Y", "keep", "discard")) 
+keep <- result %>% filter(keep == "keep")
+
+write.table(keep$SNP_ID, file = "curated_SVs_keep.txt", sep = "\t", row.names = FALSE, quote = FALSE, col.names=FALSE)
+
+```
+
 <p></p>
 
 > :heavy_exclamation_mark: When you score your plots, you may notice that while the plots support the called SV being real, some individuals might have been assigned the wrong genotype compared to the genotype you believe their raw mapped data supports. It is always a good idea to re-genotype your SVs, and if you see a lot of miss-assigned genotypes then this means it is extra important for your dataset.
