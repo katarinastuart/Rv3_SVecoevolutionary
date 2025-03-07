@@ -6,8 +6,10 @@ Example samplot datasets
 First [Samplot](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02380-5)
 
 A metadata file ``samplot_batch_$BATCH.txt`` was preprepared with the following info per line;
-CHROM START END LENGTH TYPE = information specific to the SV
-HOMR1 HOMR2 HET1 HET2 HOMA1 HOMA2 = example genotypes (2x homoxygous REF, heterozygous, and homozygous ALT).
+
+- CHROM START END LENGTH TYPE = information specific to the SV
+
+- HOMR1 HOMR2 HET1 HET2 HOMA1 HOMA2 = example genotypes (2x homoxygous REF, heterozygous, and homozygous ALT).
 
 Running samplot and plotcritic in batches is recommended as this allows you to chunk your work - and you can't save your progress half way through a score run. I like to break things into groups of similar type and size, as this helps make the scoring process faster and more consistent.
 
@@ -117,10 +119,8 @@ write.table(keep$SNP_ID, file = "curated_SVs_keep.txt", sep = "\t", row.names = 
 
 
 > ├── DUP: Duplications    <br>
-> ├── INV: Inversions  <br>
 > ├── DELasmall: smaller deletions with 2x examples for each genotype  <br>
-> ├── DELabig: larger deletions with 2x examples for each genotype <br>
-> └── DELb: smaller deletions with one example genotype missing (dummy individual used)  <br>
+> └── DELabig: larger deletions with 2x examples for each genotype<br>
 
 
 > :heavy_exclamation_mark: I am looking to expand this list of examples as I work on more species and other datasets. I hope to add some long read curation, as well as plant example data, in the future.
