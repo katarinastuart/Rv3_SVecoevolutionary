@@ -55,7 +55,7 @@ plotcritic \
   -p ${BATCH}_plot \
   -i $BATCH/ \
   -q "Is this a structural variant?" \
-  -A "Y":"Yes" "M":"I'm" "N":"fries" \
+  -A "Y":"Yes" "M":"Maybe you want to make a middle catagory: uncertain?" "N":"No" \
 
 done
 ```
